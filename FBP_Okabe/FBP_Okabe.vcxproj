@@ -146,6 +146,7 @@
     <ClCompile Include="GlobalVariable.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Radon.cpp" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
