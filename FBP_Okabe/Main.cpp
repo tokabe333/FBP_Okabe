@@ -1,16 +1,13 @@
 #include "Common.h"
 
 int main() {
-	printf("%.15lf\n", PI);
+	string filename = "C:\\Okabe_8th\\Program\\FBP_Okabe\\FBP_Okabe\\ct_data1.img";
+	string outname = "ct_data_test.img";
+	int fileSize = Width * Height;
 
-	int *a = new int[10]{ 0 };
-	for (int i = 0; i < 10; ++i) {
-		a[i] = i;
-	}
+	float* imageTrue = ReadData(filename.c_str(), fileSize);
+	WriteData(outname.c_str(), imageTrue, fileSize);
 
-	int *b = new int[10];
-	memcpy(b, a, sizeof(int) * 10);
-	for (int i = 0; i < 10; ++i)cout << b[i] << endl;
 
 	return 0;
 }
