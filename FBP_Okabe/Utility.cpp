@@ -14,6 +14,7 @@ float* ReadData(const char* fileName, int size) {
 	float* projection = new float[size];
 	fread(projection, sizeof(float), size, fp);
 	fclose(fp);
+	return projection;
 } // End_Func
 
 void WriteData(const char* fileName, float* projection, int size) {

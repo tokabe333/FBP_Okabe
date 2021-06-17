@@ -12,11 +12,14 @@ using namespace std;
 
 #include "GlobalVariable.h"
 
-// Radon.cpp
+// -----------------Radon.cpp-----------------
+// ƒ‰ƒhƒ“•ÏŠ·
+float* RadonTranslate(float *img, int detectorNum, int angleNum, int width, int height);
+
 // üŒ`•âŠÔ‚Å‰ñ“]‚ğs‚¤(“¡ˆä‚³‚ñ)
 void rotate(float *img, int nx, int ny, double th);
 
 
-// Utility.cpp
+// -----------------Utility.cpp-----------------
 float* ReadData(const char* fileName, int size);
 void WriteData(const char* fileName, float* projection, int size);
