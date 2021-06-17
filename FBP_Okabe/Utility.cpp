@@ -18,7 +18,7 @@ float* ReadData(const char* fileName, int size) {
 } // End_Func
 
 void WriteData(const char* fileName, float* projection, int size) {
-	FILE *fp;
+	FILE* fp;
 	if ((fp = fopen(fileName, "wb")) == NULL) {
 		cout << "file cannot open Error. filename:" << fileName << endl;
 		exit(-1);

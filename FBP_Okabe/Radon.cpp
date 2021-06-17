@@ -1,7 +1,7 @@
 #include "Common.h"
 
 float* RadonTranslate(float *img, int detectorNum, int angleNum, int width, int height) {
-	float *dupImg = new float[width * height];
+	float *dupImg = new float[width * height]{ 0 };
 	float *projection = new float[detectorNum * angleNum]{ 0 };
 
 	// 180‹ / angleNum ‚Å‰ñ“]‚³‚¹‚È‚ª‚çüÏ•ª
@@ -12,10 +12,12 @@ float* RadonTranslate(float *img, int detectorNum, int angleNum, int width, int 
 		// “Š‰eŠp“x‚É‡‚í‚¹‚Ä‰ñ“]
 		rotate(dupImg, width, height, angle);
 
+		cout << "angle:" << angle << endl;
+
 		// c•ûŒü‚Ì‘˜a(üÏ•ª)‚ğ‹‚ß‚é
 		for (int j = 0; j < width; ++j) {
 			for (int i = 0; i < height; ++i) {
-				projection[k * detectorNum + j] += img[i * width + j];
+				projection[k * detectorNum + j] += dupImg[i * width + j];
 			}
 		} // End_Dual_For
 	} // End_For
