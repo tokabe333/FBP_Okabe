@@ -4,7 +4,7 @@ const double PI = 3.14159265358979;
 
 const int DetectorNum = 512;
 
-const int AngleNum = 64;
+const int AngleNum = 180;
 
 const int Width = 512;
 
